@@ -18,3 +18,7 @@ Lab: lab00
 ./src/test/java
 
 1.4 - git@gitlab.bucknell.edu:kam071/csci205_labs.git
+
+6.1 - Prints a String and then terminate the line.
+6.2 - in, type InputStream
+6.3 - System.out.getProperty(os.name);
