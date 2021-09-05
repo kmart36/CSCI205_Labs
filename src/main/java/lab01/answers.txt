@@ -1,0 +1,27 @@
+/* *****************************************
+* CSCI205 - Software Engineering and Design
+* Fall 2021
+* Instructor: Brian King
+* Section: 02 - 9:50am
+*
+* Name: Katy Martinson & Phil Morgan
+* Date: 9/5/2021
+*
+* Lab / Assignment: Lab 01
+*
+* Description:
+* Answers for lab 01
+* *****************************************/
+
+2.1
+Primitive:
+Answer = 49999995000000. Time = 7892800 ns
+
+Wrapped:
+Answer = 49999995000000. Time = 80676200 ns
+Primitive types used 8.9 percent of the time of wrapper objects.
+
+2.2
+The primitive types likely take much less time because they require much less memory and
+they are not references to values while objects are. They take longer to process and
+access.
