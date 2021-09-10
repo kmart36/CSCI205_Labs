@@ -22,6 +22,7 @@ import java.util.Scanner;
  * A simple program to help us become familiar with IntelliJ
  *
  * @author Katy Martinson
+ *
  */
 public class HelloIntelliJ {
 
@@ -30,7 +31,7 @@ public class HelloIntelliJ {
     private static String sFullName;
 
     /**
-     * Main method for the program.
+     * Main method to ask the user for their name and do some basic analysis with it
      *
      * @param args - arguments passed from the command line
      */
