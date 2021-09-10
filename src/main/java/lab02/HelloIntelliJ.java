@@ -13,7 +13,7 @@
  * Class: HelloIntelliJ
  *
  * Description:
- *
+ * Introduction to IntelliJ
  * ****************************************
  */
 package lab02;
