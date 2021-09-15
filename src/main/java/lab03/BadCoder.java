@@ -13,7 +13,7 @@
  * Class: BadCoder
  *
  * Description:
- *
+ * Testing the refactoring and extracting tools to clean the code.
  * ****************************************
  */
 package lab03;
