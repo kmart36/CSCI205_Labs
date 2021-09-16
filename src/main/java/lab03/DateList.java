@@ -3,7 +3,7 @@
  * Fall 2021
  * Instructor: Prof. Brian King
  *
- * Name: Katy Martinson
+ * Name: Katy Martinson and Phil Morgan
  * Section: 9:30am
  * Date: 9/15/2021
  * Time: 11:18 AM
@@ -13,7 +13,7 @@
  * Class: DateList
  *
  * Description:
- *
+ * Construction of the DateList object and all of its methods and attributes.
  * ****************************************
  */
 package lab03;

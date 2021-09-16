@@ -2,7 +2,7 @@
  * CSCI205 - Software Engineering and Design
  * Fall 2021
  *
- * Name: YOUR NAME
+ * Name: Katy Martinson and Phil Morgan
  * Date: 9/15/21
  * Time: 11:24 PM
  *
@@ -10,7 +10,7 @@
  * Package: lab03
  * Class: DateListTester
  * Description:
- *
+ * A tester class for the class DateList
  * ****************************************
  */
 
