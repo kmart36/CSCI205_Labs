@@ -160,10 +160,7 @@ public class DateProcessor {
         LocalDate today = LocalDate.now();
         System.out.println("What day were you born? (Enter as YYYY-MM-DD)");
         String dayBorn = scnr.nextLine();
-        int year = Integer.parseInt(dayBorn.substring(0, 4));
-        int month = Integer.parseInt(dayBorn.substring(5, 7));
-        int day = Integer.parseInt(dayBorn.substring(8, 10));
-        LocalDate birthday = LocalDate.of(year, month, day);
+        LocalDate birthday = LocalDate.parse(dayBorn);
         Period p = Period.between(birthday, today);
         long totalDays = ChronoUnit.DAYS.between(birthday, today);
         System.out.println("You are " + p.getYears() + " years, " + p.getMonths() +
