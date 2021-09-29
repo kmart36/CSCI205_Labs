@@ -2,15 +2,15 @@
  * CSCI205 - Software Engineering and Design
  * Fall 2021
  *
- * Name: YOUR NAME
- * Date: 9/27/21
+ * Name: Katy Martinson
+ * Date: 9/29/21
  * Time: 10:00 AM
  *
  * Project: csci205_labs
  * Package: lab05.start
  * Class: ExceptionExample
  * Description:
- *
+ * Experimenting with Exception catching
  * ****************************************
  */
 
