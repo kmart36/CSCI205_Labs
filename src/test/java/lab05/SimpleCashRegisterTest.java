@@ -160,6 +160,9 @@ class SimpleCashRegisterTest {
         assertThrows(ChangeException.class, () -> register.giveChange());
     }
 
+    /**
+     * A test to make sure equals is working properly
+     */
     @Test
     void testEquals() {
         SimpleCashRegister register2 = new SimpleCashRegister();
