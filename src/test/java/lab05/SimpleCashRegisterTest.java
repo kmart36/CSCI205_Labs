@@ -159,4 +159,27 @@ class SimpleCashRegisterTest {
         register.collectPayment(Money.DOLLAR, 8);
         assertThrows(ChangeException.class, () -> register.giveChange());
     }
+
+    @Test
+    void testEquals() {
+        SimpleCashRegister register2 = new SimpleCashRegister();
+        // Making sure two newly made registers are equal
+        assertEquals(register, register2);
+
+        register.scanItem(2.50);
+        register.scanItem(2.00);
+        register.collectPayment(Money.DOLLAR, 5);
+
+        // Once changes have been made to one register, they should no longer
+        // be equal
+        assertNotEquals(register, register2);
+
+        register2.scanItem(2.50);
+        register2.scanItem(2.00);
+        register2.collectPayment(Money.DOLLAR, 5);
+
+        // Once the same changes have been made to the other register, they
+        // should be equal again
+        assertEquals(register, register2);
+    }
 }

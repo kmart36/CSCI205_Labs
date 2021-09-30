@@ -20,6 +20,7 @@ package lab05;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * A custom exception thrown if the cash register tries to give chance before
@@ -156,6 +157,18 @@ public class SimpleCashRegister {
         totalTransaction = 0;
         paymentCollected = 0;
         return change;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        SimpleCashRegister that = (SimpleCashRegister) o;
+        return Double.compare(that.totalTransaction, totalTransaction) == 0 &&
+                Double.compare(that.paymentCollected, paymentCollected) == 0 &&
+                Objects.equals(listOfItemPrices, that.listOfItemPrices);
     }
 
     public static void main(String[] args) {
