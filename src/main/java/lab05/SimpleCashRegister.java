@@ -159,6 +159,12 @@ public class SimpleCashRegister {
         return change;
     }
 
+
+    /**
+     * @param o
+     * @return True if the two Cash Registers are equal to each other in every field,
+     * False otherwise
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)
