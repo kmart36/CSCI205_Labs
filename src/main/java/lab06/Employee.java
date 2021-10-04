@@ -17,6 +17,7 @@
 package lab06;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 
 /**
  * A basic representation for an Employee to be stored in an HR database system
@@ -43,6 +44,9 @@ public class Employee {
     /** Current salary of the employee */
     private double salary;
 
+    /** Collection of unique Employee IDs generated / assigned */
+    private static HashSet<Integer> setOfAssignedIDs = new HashSet<>();
+
     /**
      * Explicit constructor to create new employee
      *
@@ -60,6 +64,7 @@ public class Employee {
         this.ssNum = ssNum;
         this.hireDate = hireDate;
         this.salary = salary;
+
     }
 
     /**
@@ -118,6 +123,14 @@ public class Employee {
     public double raiseSalary(double salaryAdj) {
         this.salary += salaryAdj;
         return this.salary;
+    }
+
+    private static Integer generateID() {
+        Integer newID = 1;
+        while (setOfAssignedIDs.contains(newID)) {
+            newID++;
+        }
+        return newID;
     }
 
     /**
