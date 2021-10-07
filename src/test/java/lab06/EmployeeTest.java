@@ -10,6 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeTest {
 
+    private static final double EPSILON = 1.0E-10;
+
     @BeforeEach
     void setUp() {
     }
@@ -53,5 +55,14 @@ class EmployeeTest {
         Employee emp2 = new Employee(5, "A", "B", 100000000, LocalDate.now(), 10000);
         boolean what = emp1 == emp2;
         assertEquals(true, emp1.equals(emp2));
+    }
+
+    @Test
+    void testPayable() {
+        Employee emp = new Employee(1, "Brian", "King", 123459876, LocalDate.now(), 10 * 52 * 40);
+        assertEquals(emp.getFirstName() + " " + emp.getLastName(), emp.getPayTo());
+        assertEquals(400, emp.calculatePay(40), EPSILON);
+        double test = emp.calculatePay(50);
+        assertEquals(550, emp.calculatePay(50), EPSILON);
     }
 }
