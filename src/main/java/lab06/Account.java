@@ -3,7 +3,7 @@
  * Fall 2021
  * Instructor: Prof. Brian King
  *
- * Name: Katy Martinson
+ * Name: Katy Martinson and Phil Morgan
  * Section: 9:30am
  * Date: 10/5/2021
  * Time: 11:08 PM
@@ -13,9 +13,10 @@
  * Class: Account
  *
  * Description:
- *
+ * An object representation of a bank account controlled by a company that holds money to pay to Employees, Managers, and Contractors.
  * ****************************************
  */
+
 package lab06;
 
 public class Account{
@@ -38,7 +39,8 @@ public class Account{
 
     public void debit(double amount) throws InsufficientFundsException {
         if (this.balance - amount < 0) {
-            String msg = "Cannot withdraw " + amount + " from the account. Available funds: " + this.balance;
+            String msg = "Cannot withdraw $" + amount;
+            msg += String.format(" from the account. Available funds: $%.2f", this.balance);
             throw new InsufficientFundsException(msg);
         }
         this.balance -= amount;
@@ -58,14 +60,15 @@ public class Account{
     public String writeCheck() {
         if (this.lastAmountPaid == 0.0) { return ""; }
         String s = "Pay to:            " + lastPayee.getPayTo() + "\n" +
-                "Pay memo:          " + lastPayee.getPayMemo() + "\n" +
-                "Pay amount:        " + this.lastAmountPaid;
+                "Pay memo:          " + lastPayee.getPayMemo() + "\n";
+        s += String.format("Pay amount:        $%.2f", this.lastAmountPaid);
         return s;
     }
 
     @Override
     public String toString() {
-        return "" + this.balance;
+        String s = String.format("Account Balance: $%.2f", this.balance);
+        return s;
     }
 }
 

@@ -180,10 +180,8 @@ public class Employee implements Payable {
      */
     @Override
     public boolean equals(Object o) {
-        System.out.println("world");
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        System.out.println("hello");
         Employee employee = (Employee) o;
         return ssNum == employee.ssNum;
     }

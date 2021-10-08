@@ -8,9 +8,9 @@
  *
  * Project: csci205_labs
  * Package: lab06
- * Class: HRDateUtility
+ * Class: HRDateUtils
  * Description:
- *
+ * A utility class to prepare dates easily
  * ****************************************
  */
 

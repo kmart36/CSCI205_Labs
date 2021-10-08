@@ -1,3 +1,22 @@
+/* *****************************************
+ * CSCI205 - Software Engineering and Design
+ * Fall 2021
+ * Instructor: Prof. Brian King
+ *
+ * Name: Katy Martinson and Phil Morgan
+ * Section: 9:30am
+ * Date: 10/7/2021
+ * Time: 6:59 PM
+ *
+ * Project: csci205_labs
+ * Package: lab06
+ * Class: ManagerTest
+ *
+ * Description:
+ * A test class for the Manager test
+ * ****************************************
+ */
+
 package lab06;
 
 import org.junit.jupiter.api.AfterEach;
@@ -32,6 +51,10 @@ class ManagerTest {
         assertEquals(emp2, mgr.getEmpList().get(1));
     }
 
+    /**
+     * A test to ensure that addEmployee throws a ManagerException when expected
+     * @throws ManagerException Exception thrown when an employee is already in the list and is attempted to be added again
+     */
     @Test
     void addEmployeeException() throws ManagerException {
         mgr.addEmployee(emp1);
@@ -39,6 +62,10 @@ class ManagerTest {
         assertThrows(ManagerException.class, () -> mgr.addEmployee(emp1));
     }
 
+    /**
+     * Tests the removeEmployee method to ensure it is working properly
+     * @throws ManagerException Exception thrown when an employee not in the list is attempted to be removed
+     */
     @Test
     void removeEmployee() throws ManagerException {
         mgr.addEmployee(emp1);
@@ -47,8 +74,12 @@ class ManagerTest {
         assertEquals(emp2, mgr.getEmpList().get(0));
     }
 
+    /**
+     * A test to ensure that removeEmployee throws a ManagerException when expected
+     * @throws ManagerException Exception thrown when an employee not in the list is attempted to be removed
+     */
     @Test
-    void removeEmployeeException() {
+    void removeEmployeeException() throws ManagerException {
         assertThrows(ManagerException.class, () -> mgr.removeEmployee(emp1));
     }
 }

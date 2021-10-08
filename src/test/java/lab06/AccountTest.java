@@ -1,3 +1,22 @@
+/* *****************************************
+ * CSCI205 - Software Engineering and Design
+ * Fall 2021
+ * Instructor: Prof. Brian King
+ *
+ * Name: Katy Martinson and Phil Morgan
+ * Section: 9:30am
+ * Date: 10/7/2021
+ * Time: 6:59 PM
+ *
+ * Project: csci205_labs
+ * Package: lab06
+ * Class: AccountTest
+ *
+ * Description:
+ * Test class for the Account class
+ * ****************************************
+ */
+
 package lab06;
 
 import org.junit.jupiter.api.AfterEach;
@@ -11,10 +30,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
+    /** Delta constant for checking floating point assertions */
     private static final double EPSILON = 1.0E-10;
+
     private Account acct;
     private Employee emp;
 
+    /**
+     * Instantiates an Account and an Employee to use for testing
+     */
     @BeforeEach
     void setUp() {
         // Set up an account to have 1000 initial balance
@@ -32,6 +56,9 @@ class AccountTest {
     void tearDown() {
     }
 
+    /**
+     * Testing the credit method to ensure it is working properly
+     */
     @Test
     void credit() {
         assertEquals(1000.0, acct.getBalance(), EPSILON);
@@ -39,6 +66,9 @@ class AccountTest {
         assertEquals(2000.0, acct.getBalance(), EPSILON);
     }
 
+    /**
+     * Testing the debit method to ensure it is working properly
+     */
     @Test
     void debit() throws InsufficientFundsException {
         assertEquals(1000.0, acct.getBalance(), EPSILON);
@@ -46,6 +76,9 @@ class AccountTest {
         assertEquals(750.0, acct.getBalance(), EPSILON);
     }
 
+    /**
+     * Testing the prepareCheckAndDebit method to ensure it is working properly
+     */
     @Test
     void prepareCheckAndDebit() throws InsufficientFundsException {
         acct.prepareCheckAndDebit(emp, 40);
@@ -55,6 +88,9 @@ class AccountTest {
         assertEquals(400, acct.getCheckAmount(), EPSILON);
     }
 
+    /**
+     * Testing the writeCheck method to ensure it is working properly
+     */
     @Test
     void writeCheck() throws InsufficientFundsException {
         acct.prepareCheckAndDebit(emp, 40);
@@ -64,6 +100,9 @@ class AccountTest {
         System.out.println(acct.writeCheck());
     }
 
+    /**
+     * Testing the debitException to ensure that the Exception is thrown when it should be thrown
+     */
     @Test
     void debitException() {
         assertThrows(InsufficientFundsException.class, () -> acct.debit(2000.0));
