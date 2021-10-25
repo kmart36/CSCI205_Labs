@@ -1,0 +1,23 @@
+TASK: Create a Square class (represents one square)
+Status: COMPLETED
+Time Estimate: 1 hour
+Actual time spent: 1.5 hours
+Assigned to: Both
+
+TASK: Create a Board class (represents the game board)
+Status: COMPLETED
+Time Estimate: 1 hour
+Actual time spent: 1.5 hours
+Assigned to: Both
+
+TASK: Create a Square test class (represents a Square tester)
+Status: TODO
+Time Estimate: 1 hour
+Actual time spent: ____
+Assigned to:
+
+TASK: Create a Board test class (represents a Board tester)
+Status: TODO
+Time Estimate: 1 hour
+Actual time spent: ____
+Assigned to:

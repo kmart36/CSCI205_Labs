@@ -1,0 +1,9 @@
+- The game needs a board that is 16 x 16
+- The board will consist of 256 tiles, each with a status (bomb, or number of bombs surrounding
+the tile) and whether or not the tile is flagged, clicked, or not clicked. There will be a set number of
+40 bombs.
+- The player selects a tile to uncover the number of surrounding bombs.
+- A square clicked that has 0 surrounding bombs will also automatically click every other surrounding
+square with a 0.
+- The game ends when a player clicks on a bomb or when the player uncovers the entire board and
+has every bomb flagged.
