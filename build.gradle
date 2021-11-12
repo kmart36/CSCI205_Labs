@@ -31,5 +31,5 @@ dependencies {
 }
 
 application {
-  mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "lab01.PrimitivePerf"
+  mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "lab11.ex2.ParticleSystemMain"
 }
